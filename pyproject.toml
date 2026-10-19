@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lrc-kit"
+name = "lrc-toolkit"
 version = "0.1.0"
 description = "Toolkit for automating Adobe Lightroom Classic: read the catalog, preflight Lua plugins offline, verify color numerically."
 readme = "README.md"

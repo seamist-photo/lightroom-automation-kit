@@ -5,10 +5,17 @@ each solving a problem that otherwise costs a full Lightroom restart, a manual
 click, or a judgement call about colour.
 
 ```bash
-pip install lrc-kit              # core: zero dependencies
-pip install "lrc-kit[color]"     # adds numpy + pillow (colour verification)
-pip install "lrc-kit[preflight]" # adds lupa (running Lua logic tests)
+git clone https://github.com/seamist-photo/lightroom-automation-kit
+cd lightroom-automation-kit
+
+pip install -e .              # core: zero dependencies
+pip install -e ".[color]"     # adds numpy + pillow (colour verification)
+pip install -e ".[preflight]" # adds lupa (running Lua logic tests)
 ```
+
+The PyPI name `lrc-toolkit` is reserved but **nothing is published yet** - install
+from source as above. Everything below also works straight from a checkout with
+`python -m lrc_kit.cli` instead of `lrc-kit`.
 
 - **`preflight`** - compile-check plugin Lua with a real **Lua 5.1** compiler before
   making anyone restart Lightroom. Catches the errors, and the false errors, that

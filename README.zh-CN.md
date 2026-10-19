@@ -3,10 +3,15 @@
 给 Adobe Lightroom Classic 做自动化的实用工具集。三个小工具，每个都对应一个真实痛点：要么让你少重启一次 Lightroom，要么让你少点一次鼠标，要么让"颜色像不像"变成数字而不是感觉。
 
 ```bash
-pip install lrc-kit              # 核心：零依赖
-pip install "lrc-kit[color]"     # 加 numpy + pillow（颜色校验）
-pip install "lrc-kit[preflight]" # 加 lupa（跑 Lua 逻辑测试）
+git clone https://github.com/seamist-photo/lightroom-automation-kit
+cd lightroom-automation-kit
+
+pip install -e .              # 核心：零依赖
+pip install -e ".[color]"     # 加 numpy + pillow（颜色校验）
+pip install -e ".[preflight]" # 加 lupa（跑 Lua 逻辑测试）
 ```
+
+PyPI 包名 `lrc-toolkit` 已占位但**尚未发布**，所以按上面从源码安装。不想装包也可以直接在仓库目录里用 `python -m lrc_kit.cli`。
 
 ## 三个工具
 
